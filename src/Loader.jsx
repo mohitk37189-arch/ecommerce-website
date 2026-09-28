@@ -68,7 +68,6 @@ const Loader = ({ onFinish }) => {
 >
   <div className="bike-motion motion-one"></div>
   <div className="bike-motion motion-two"></div>
-
   <img
     src="/public/categories/bike.png"
     alt="Delivery Bike"

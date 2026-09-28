@@ -26,9 +26,9 @@ function Signup({ onSignupSuccess, onLogin }) {
       setLoading(true);
       setMessage("");
 
-      const response = await fetch(
-        "http://localhost:5000/api/auth/signup",
-        {
+     const response = await fetch(
+  "https://ecommerce-website-12i1.onrender.com/api/auth/signup",
+  {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -71,10 +71,9 @@ function Signup({ onSignupSuccess, onLogin }) {
     try {
       setLoading(true);
       setMessage("");
-
-      const response = await fetch(
-        "http://localhost:5000/api/auth/verify-otp",
-        {
+const response = await fetch(
+  "https://ecommerce-website-12i1.onrender.com/api/auth/verify-otp",
+  {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
