@@ -1,0 +1,461 @@
+/* =====================================
+   FRESHMART PREMIUM FOOTER
+===================================== */
+
+.freshmart-footer {
+  margin-top: 70px;
+  background: #071a11;
+  color: #ffffff;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+/* =====================================
+   MAIN FOOTER
+===================================== */
+
+.freshmart-footer-main {
+  max-width: 1450px;
+  margin: auto;
+  padding: 65px 45px 55px;
+
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr 1.15fr 1.3fr;
+
+  gap: 55px;
+}
+
+
+/* =====================================
+   BRAND
+===================================== */
+
+.footer-logo {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.footer-logo span {
+  color: #20b83f;
+}
+
+.footer-tagline {
+  margin: 12px 0 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.footer-description {
+  max-width: 330px;
+  color: #aebdb4;
+  line-height: 1.7;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+
+/* =====================================
+   TRUST
+===================================== */
+
+.footer-trust {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.footer-trust div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #c7d1cc;
+  font-size: 13px;
+}
+
+.footer-trust strong {
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: #20b83f;
+  color: white;
+
+  font-size: 12px;
+}
+
+
+/* =====================================
+   COLUMNS
+===================================== */
+
+.footer-column,
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column h3,
+.footer-contact h3 {
+  margin: 0 0 22px;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.footer-column a,
+.footer-column button {
+  display: block;
+  width: max-content;
+
+  background: transparent;
+  border: none;
+  outline: none;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  font-size: 15px;
+  font-family: inherit;
+
+  padding: 5px 0;
+  margin: 0;
+
+  cursor: pointer;
+  text-align: left;
+
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-column a:hover,
+.footer-column button:hover {
+  color: #22c55e;
+  transform: translateX(4px);
+  cursor: pointer;
+}
+
+.footer-column a:hover {
+  color: #20b83f;
+  transform: translateX(4px);
+}
+
+
+/* =====================================
+   CONTACT
+===================================== */
+
+.contact-item {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+}
+
+.contact-icon {
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: rgba(32, 184, 63, 0.12);
+  color: #20b83f;
+
+  font-size: 16px;
+}
+
+.contact-item small {
+  color: #82948a;
+  font-size: 11px;
+}
+
+.contact-item p {
+  margin: 2px 0 0;
+
+  color: #d6ddd9;
+  font-size: 13px;
+}
+
+
+/* =====================================
+   SOCIAL
+===================================== */
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.footer-social span {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #10291e;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.footer-social span:hover {
+  background: #20b83f;
+  transform: translateY(-3px);
+}
+
+
+/* =====================================
+   NEWSLETTER
+===================================== */
+
+.footer-newsletter {
+  max-width: 1360px;
+  margin: 0 auto;
+
+  padding: 25px 35px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.footer-newsletter h3 {
+  margin: 0 0 6px;
+
+  font-size: 18px;
+}
+
+.footer-newsletter p {
+  margin: 0;
+
+  color: #8fa097;
+
+  font-size: 13px;
+}
+
+
+.newsletter-box {
+  display: flex;
+
+  width: 390px;
+  max-width: 100%;
+}
+
+.newsletter-box input {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 13px 15px;
+
+  border: none;
+  outline: none;
+
+  background: #ffffff;
+  color: #222;
+
+  border-radius: 7px 0 0 7px;
+
+  font-size: 13px;
+}
+
+.newsletter-box button {
+  border: none;
+
+  padding: 0 19px;
+
+  background: #20b83f;
+  color: #ffffff;
+
+  font-weight: 600;
+
+  border-radius: 0 7px 7px 0;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.newsletter-box button:hover {
+  background: #179d34;
+}
+
+
+/* =====================================
+   BOTTOM
+===================================== */
+
+.footer-bottom {
+  max-width: 1450px;
+  margin: auto;
+
+  padding: 20px 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  color: #718178;
+
+  font-size: 12px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 18px;
+}
+
+.footer-bottom-links a {
+  color: #718178;
+  text-decoration: none;
+}
+
+.footer-bottom-links a:hover {
+  color: #20b83f;
+}
+
+.made-with span {
+  color: #20b83f;
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1100px) {
+
+  .freshmart-footer-main {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  .footer-brand-section {
+    grid-column: span 3;
+  }
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 700px) {
+
+  .freshmart-footer-main {
+    grid-template-columns: 1fr 1fr;
+
+    padding: 45px 25px;
+
+    gap: 35px 25px;
+  }
+
+  .footer-brand-section {
+    grid-column: span 2;
+  }
+
+  .footer-description {
+    max-width: 100%;
+  }
+
+  .footer-newsletter {
+    margin: 0 20px;
+
+    padding: 25px 0;
+
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .newsletter-box {
+    width: 100%;
+  }
+
+  .footer-bottom {
+    padding: 20px;
+
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+}
+
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 450px) {
+
+  .freshmart-footer-main {
+    grid-template-columns: 1fr;
+
+    padding: 40px 20px;
+  }
+
+  .footer-brand-section {
+    grid-column: span 1;
+  }
+
+  .footer-newsletter {
+    margin: 0 20px;
+  }
+
+  .newsletter-box {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .newsletter-box input {
+    border-radius: 7px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .newsletter-box button {
+    height: 42px;
+    border-radius: 7px;
+  }
+
+  .footer-bottom-links {
+    gap: 12px;
+  }
+
+}
