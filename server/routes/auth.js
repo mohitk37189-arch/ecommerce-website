@@ -1,20 +1,52 @@
 const express = require("express");
 const bcrypt = require("bcryptjs");
-const nodemailer = require("nodemailer");
 const User = require("../models/User");
 
 const router = express.Router();
 
-// ================= GMAIL TRANSPORTER =================
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-});
+// =====================================================
+// BREVO EMAIL FUNCTION
+// =====================================================
+const sendEmail = async (to, subject, text) => {
+  const response = await fetch("https://api.brevo.com/v3/smtp/email", {
+    method: "POST",
 
-// ================= SIGNUP + SEND OTP =================
+    headers: {
+      "Content-Type": "application/json",
+      "api-key": process.env.BREVO_API_KEY,
+    },
+
+    body: JSON.stringify({
+      sender: {
+        name: "FreshMart",
+        email: "mohitk37189@gmail.com",
+      },
+
+      to: [
+        {
+          email: to,
+        },
+      ],
+
+      subject: subject,
+      textContent: text,
+    }),
+  });
+
+  const data = await response.json();
+
+  if (!response.ok) {
+    console.log("Brevo Error:", data);
+
+    throw new Error(data.message || "Email sending failed");
+  }
+
+  return data;
+};
+
+// =====================================================
+// SIGNUP + SEND OTP
+// =====================================================
 router.post("/signup", async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -59,12 +91,12 @@ router.post("/signup", async (req, res) => {
       });
     }
 
-    await transporter.sendMail({
-      from: process.env.EMAIL_USER,
-      to: email,
-      subject: "FreshMart Signup OTP",
-      text: `Your FreshMart OTP is ${otp}. This OTP is valid for 10 minutes.`,
-    });
+    // SEND OTP USING BREVO
+    await sendEmail(
+      email,
+      "FreshMart Signup OTP",
+      `Your FreshMart OTP is ${otp}. This OTP is valid for 10 minutes.`
+    );
 
     res.json({
       success: true,
@@ -80,7 +112,9 @@ router.post("/signup", async (req, res) => {
   }
 });
 
-// ================= VERIFY SIGNUP OTP =================
+// =====================================================
+// VERIFY SIGNUP OTP
+// =====================================================
 router.post("/verify-otp", async (req, res) => {
   try {
     const { email, otp } = req.body;
@@ -126,30 +160,42 @@ router.post("/verify-otp", async (req, res) => {
   }
 });
 
-// ================= LOGIN =================
+// =====================================================
+// LOGIN
+// =====================================================
 router.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
+
     const user = await User.findOne({ email });
+
     if (!user) {
       return res.status(404).json({
         message: "User not found",
       });
     }
+
     if (!user.isVerified) {
       return res.status(400).json({
         message: "Please verify your email first",
       });
     }
-    const passwordMatch = await bcrypt.compare(password, user.password);
+
+    const passwordMatch = await bcrypt.compare(
+      password,
+      user.password
+    );
+
     if (!passwordMatch) {
       return res.status(401).json({
         message: "Invalid email or password",
       });
     }
+
     res.json({
       success: true,
       message: "Login successful",
+
       user: {
         name: user.name,
         email: user.email,
@@ -157,12 +203,16 @@ router.post("/login", async (req, res) => {
     });
   } catch (error) {
     console.log("Login Error:", error);
+
     res.status(500).json({
       message: "Login failed",
     });
   }
 });
-// ================= FORGOT PASSWORD - SEND OTP =================
+
+// =====================================================
+// FORGOT PASSWORD - SEND OTP
+// =====================================================
 router.post("/forgot-password", async (req, res) => {
   try {
     const { email } = req.body;
@@ -172,12 +222,15 @@ router.post("/forgot-password", async (req, res) => {
         message: "Please enter your Gmail",
       });
     }
+
     const user = await User.findOne({ email });
+
     if (!user) {
       return res.status(404).json({
         message: "No account found with this email",
       });
     }
+
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
 
     const otpExpires = new Date(Date.now() + 10 * 60 * 1000);
@@ -187,12 +240,12 @@ router.post("/forgot-password", async (req, res) => {
 
     await user.save();
 
-    await transporter.sendMail({
-      from: process.env.EMAIL_USER,
-      to: email,
-      subject: "FreshMart Password Reset OTP",
-      text: `Your FreshMart password reset OTP is ${otp}. This OTP is valid for 10 minutes.`,
-    });
+    // SEND RESET OTP USING BREVO
+    await sendEmail(
+      email,
+      "FreshMart Password Reset OTP",
+      `Your FreshMart password reset OTP is ${otp}. This OTP is valid for 10 minutes.`
+    );
 
     res.json({
       success: true,
@@ -208,7 +261,9 @@ router.post("/forgot-password", async (req, res) => {
   }
 });
 
-// ================= VERIFY FORGOT PASSWORD OTP =================
+// =====================================================
+// VERIFY FORGOT PASSWORD OTP
+// =====================================================
 router.post("/verify-forgot-otp", async (req, res) => {
   try {
     const { email, otp } = req.body;
@@ -246,7 +301,9 @@ router.post("/verify-forgot-otp", async (req, res) => {
   }
 });
 
-// ================= RESET PASSWORD =================
+// =====================================================
+// RESET PASSWORD
+// =====================================================
 router.post("/reset-password", async (req, res) => {
   try {
     const { email, otp, newPassword } = req.body;
@@ -299,4 +356,7 @@ router.post("/reset-password", async (req, res) => {
   }
 });
 
+// =====================================================
+// EXPORT
+// =====================================================
 module.exports = router;
