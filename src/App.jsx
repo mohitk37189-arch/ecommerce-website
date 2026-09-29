@@ -33306,7 +33306,7 @@ function App() {
     },
     {
       name: "Water & Ice Cubes",
-      image: "/water-ice.png",
+      image: "water-ice.png",
     },
   ];
   const snacksSideCategories = [
