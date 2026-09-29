@@ -825,7 +825,7 @@ function App() {
       oldPrice: 44,
       discount: "20% OFF",
       inStock: true,
-      image: "public/banana.avif"
+      image: "/banana.avif"
     },
     {
       name: "Tender Coconut (Nariyal)",
@@ -834,7 +834,7 @@ function App() {
       oldPrice: 121,
       discount: "12% OFF",
       inStock: true,
-      image: "public/coconat.avif",
+      image: "/coconat.avif",
     },
     {
       name: "Avocado Hass - Tanzania",
@@ -843,7 +843,7 @@ function App() {
       oldPrice: 126,
       discount: "16% OFF",
       inStock: true,
-      image: "public/avicado.avif"
+      image: "/avicado.avif"
     },
     {
       name: "Indian Guava (Amrud)",
@@ -852,7 +852,7 @@ function App() {
       oldPrice: 68,
       discount: "22% OFF",
       inStock: true,
-      image: "public/amrud.avif"
+      image: "amrud.avif"
     },
     {
       name: "Small Shimla Apple (Seb)",
@@ -861,7 +861,7 @@ function App() {
       oldPrice: 101,
       discount: "13% OFF",
       inStock: true,
-      image: "public/apple-1.avif"
+      image: "apple-1.avif"
     },
     {
       name: "Kiran - Watermelon (Tarbuj)",
@@ -870,7 +870,7 @@ function App() {
       oldPrice: 121,
       discount: "22% OFF",
       inStock: true,
-      image: "public/tarbuj black.avif"
+      image: "tarbuj black.avif"
     },
     {
       name: "Papaya (Papita)",
@@ -879,7 +879,7 @@ function App() {
       oldPrice: 106,
       discount: "22% OFF",
       inStock: true,
-      image: "public/papaya.avif"
+      image: "papaya.avif"
     },
     {
       name: "Indian Plum",
@@ -888,7 +888,7 @@ function App() {
       oldPrice: 74,
       discount: "14% OFF",
       inStock: true,
-      image: "public/palum.avif"
+      image: "palum.avif"
     },
     {
       name: "Brown Coconut",
@@ -897,7 +897,7 @@ function App() {
       oldPrice: 61,
       discount: "19% OFF",
       inStock: true,
-      image: "public/brown coconet.avif"
+      image: "brown coconet.avif"
     },
     {
       name: "Dragon Fruit",
@@ -906,7 +906,7 @@ function App() {
       oldPrice: 137,
       discount: "20% OFF",
       inStock: true,
-      image: "public/dragon fruit.avif"
+      image: "dragon fruit.avif"
     },
     {
       name: "Pomegranate - 1 piece (175-225 g)",
@@ -915,7 +915,7 @@ function App() {
       oldPrice: 64,
       discount: "16% OFF",
       inStock: true,
-      image: "public/pomegranate.avif"
+      image: "pomegranate.avif"
     },
     {
       name: "Kinnaur Apple",
@@ -924,7 +924,7 @@ function App() {
       oldPrice: 150,
       discount: "17% OFF",
       inStock: true,
-      image: "public/kinnaur apple.avif"
+      image: "kinnaur apple.avif"
     },
     {
       name: "Washington Red Delicious Apple",
@@ -933,7 +933,7 @@ function App() {
       oldPrice: 186,
       discount: "17% OFF",
       inStock: true,
-      image: "public/washington red apple.avif"
+      image: "washington red apple.avif"
     },
     {
       name: "Sweet Lime (Mosambi)",
@@ -942,7 +942,7 @@ function App() {
       oldPrice: 47,
       discount: "22% OFF",
       inStock: true,
-      image: "public/sweetlime.avif"
+      image: "sweetlime.avif"
     },
     {
       name: "Valencia Navel Orange (Imported)",
@@ -951,7 +951,7 @@ function App() {
       oldPrice: 131,
       discount: "17% OFF",
       inStock: true,
-      image: "public/kinnu.avif"
+      image: "kinnu.avif"
     },
     {
       name: "Indian Royal Gala Apple - Large",
@@ -960,7 +960,7 @@ function App() {
       oldPrice: 146,
       discount: "17% OFF",
       inStock: true,
-      image: "public/gala apple.avif"
+      image: "gala apple.avif"
     },
     {
       name: "Blueberry",
@@ -969,7 +969,7 @@ function App() {
       oldPrice: 341,
       discount: "20% OFF",
       inStock: true,
-      image: "public/blue barry.avif"
+      image: "blue barry.avif"
     },
     {
       name: "Mini Orange 250 g",
@@ -978,7 +978,7 @@ function App() {
       oldPrice: 125,
       discount: "14% OFF",
       inStock: true,
-      image: "public/mini orange.avif"
+      image: "mini orange.avif"
     },
     {
       name: "Pomegranate - Medium (500g - 700 g) (Anaar)",
@@ -987,7 +987,7 @@ function App() {
       oldPrice: 134,
       discount: "21% OFF",
       inStock: true,
-      image: "public/pom 500.avif"
+      image: "pom 500.avif"
     },
     {
       name: "Green Kiwi",
@@ -996,7 +996,7 @@ function App() {
       oldPrice: 161,
       discount: "14% OFF",
       inStock: true,
-      image: "public/kiwi.avif",
+      image: "kiwi.avif",
     },
     {
       name: "Pineapple",
@@ -1005,7 +1005,7 @@ function App() {
       oldPrice: 156,
       discount: "21% OFF",
       inStock: true,
-      image: "public/pineapple.avif"
+      image: "pineapple.avif"
     },
     {
       name: "Muskmelon (Kharbuja)",
@@ -1014,7 +1014,7 @@ function App() {
       oldPrice: 120,
       discount: "18% OFF",
       inStock: true,
-      image: "public/mus kharbuja.avif"
+      image: "mus kharbuja.avif"
     },
     {
       name: "Royal Gala Apple (Italy / Poland) (Seb)",
@@ -1023,7 +1023,7 @@ function App() {
       oldPrice: 180,
       discount: "20% OFF",
       inStock: true,
-      image: "public/itli apple.avif"
+      image: "itli apple.avif"
     },
     {
       name: "Sun Melon (Sarda)",
@@ -1032,7 +1032,7 @@ function App() {
       oldPrice: 157,
       discount: "21% OFF",
       inStock: true,
-      image: "public/sun melon.avif"
+      image: "sun melon.avif"
     },
     {
       name: "Wood Apple for Pooja (Raw)",
@@ -1041,7 +1041,7 @@ function App() {
       oldPrice: 69,
       discount: "10% OFF",
       inStock: true,
-      image: "public/wood apple.avif"
+      image: "wood apple.avif"
     },
 
     // OUT OF STOCK
@@ -1052,7 +1052,7 @@ function App() {
       oldPrice: 57,
       discount: "10% OFF",
       inStock: false,
-      image: "public/pear naspati.avif"
+      image: "pear naspati.avif"
     },
     {
       name: "Pear Bartlett (Babugosha)",
@@ -1061,7 +1061,7 @@ function App() {
       oldPrice: 111,
       discount: "10% OFF",
       inStock: false,
-      image: "public/pear bartket.avif",
+      image: "pear bartket.avif",
     },
     {
       name: "Dragon Fruit - Red Flesh",
@@ -1070,7 +1070,7 @@ function App() {
       oldPrice: 105,
       discount: "10% OFF",
       inStock: false,
-      image: "public/red dragon fruit.avif"
+      image: "red dragon fruit.avif"
     },
     {
       name: "Chaunsa Mango (Chaunsa Aam)",
@@ -1079,7 +1079,7 @@ function App() {
       oldPrice: 183,
       discount: "10% OFF",
       inStock: false,
-      image: "public/chusna mango.avif"
+      image: "chusna mango.avif"
     },
     {
       name: "Red-Globe Grapes",
@@ -1088,7 +1088,7 @@ function App() {
       oldPrice: 163,
       discount: "10% OFF",
       inStock: false,
-      image: "public/red graps.avif"
+      image: "red graps.avif"
     },
     {
       name: "Fresh Yellow Dates",
@@ -1097,7 +1097,7 @@ function App() {
       oldPrice: 66,
       discount: "10% OFF",
       inStock: false,
-      image: "public/date.avif"
+      image: "date.avif"
     },
     {
       name: "Assorted Fruits for Pooja (Panch Phal)",
@@ -1106,7 +1106,7 @@ function App() {
       oldPrice: 139,
       discount: "10% OFF",
       inStock: false,
-      image: "public/panch fruit.avif"
+      image: "panch fruit.avif"
     },
     {
       name: "Red Cherry - Imported",
@@ -1115,7 +1115,7 @@ function App() {
       oldPrice: 176,
       discount: "10% OFF",
       inStock: false,
-      image: "public/cherry.avif"
+      image: "cherry.avif"
     },
     {
       name: "Raw Mango",
@@ -1124,7 +1124,7 @@ function App() {
       oldPrice: 46,
       discount: "10% OFF",
       inStock: false,
-      image: "public/raw mango.avif"
+      image: "raw mango.avif"
     },
     {
       name: "Indian Green Apple",
@@ -1133,7 +1133,7 @@ function App() {
       oldPrice: 105,
       discount: "10% OFF",
       inStock: false,
-      image: "public/india gren apple.avif"
+      image: "india gren apple.avif"
     },
     {
       name: "Pear Beauty - South Africa",
@@ -1142,7 +1142,7 @@ function App() {
       oldPrice: 161,
       discount: "10% OFF",
       inStock: false,
-      image: "public/pear red.avif",
+      image: "pear red.avif",
     },
     {
       name: "Pomegranate Peeled",
@@ -1151,7 +1151,7 @@ function App() {
       oldPrice: 16,
       discount: "10% OFF",
       inStock: false,
-      image: "public/dana.avif"
+      image: "dana.avif"
     },
     {
       name: "Bael Fruit",
@@ -1160,7 +1160,7 @@ function App() {
       oldPrice: 64,
       discount: "10% OFF",
       inStock: false,
-      image: "public/balpater.avif"
+      image: "balpater.avif"
     },
 
   ];
@@ -16083,7 +16083,7 @@ function App() {
       oldPrice: 45,
       discount: "40% OFF",
       image:
-        "public/choki choki.avif",
+        "choki choki.avif",
     },
 
     {
@@ -16094,7 +16094,7 @@ function App() {
       oldPrice: 50,
       discount: "44% OFF",
       image:
-        "public/wafer.avif",
+        "wafer.avif",
     },
 
     {
@@ -16372,7 +16372,7 @@ function App() {
       price: 39,
       oldPrice: 40,
       discount: "5% OFF",
-      image: "public/1.avif",
+      image: "1.avif",
     },
     {
       id: 2002,
@@ -34127,7 +34127,7 @@ function App() {
       <header className="header">
 
         <div className="logo">
-          <img src="public/logo-site.png"
+          <img src="logo-site.png"
             alt="" />
         </div>
 
@@ -34264,7 +34264,7 @@ function App() {
             </div>
             <div className="hero-image">
               <img
-                src="public/fruit.png"
+                src="fruit.png"
                 alt="Fresh Fruits"
               />
             </div>
