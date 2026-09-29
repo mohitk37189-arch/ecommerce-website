@@ -29,10 +29,11 @@ function App() {
 
   const [selectedSideCategory, setSelectedSideCategory] =
     useState("Fresh Vegetables");
+     const [searchTerm, setSearchTerm] = useState("");
   if (window.location.pathname === "/payment") {
     return <Payment />;
   }
-  const [searchTerm, setSearchTerm] = useState("");
+ 
 
   const categories = [
     {

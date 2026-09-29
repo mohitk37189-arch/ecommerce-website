@@ -25,9 +25,9 @@ function Login({ onLogin, onSignup }) {
       setLoading(true);
       setMessage("");
 
-     const response = await fetch(
-  "https://ecommerce-website-12i1.onrender.com/api/auth/login",
-  {
+      const response = await fetch(
+        "https://ecommerce-website-12i1.onrender.com/api/auth/login",
+        {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -68,9 +68,9 @@ function Login({ onLogin, onSignup }) {
     try {
       setLoading(true);
       setMessage("");
-const response = await fetch(
-  "https://ecommerce-website-12i1.onrender.com/api/auth/forgot-password",
-  {
+      const response = await fetch(
+        "https://ecommerce-website-12i1.onrender.com/api/auth/forgot-password",
+        {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -109,9 +109,9 @@ const response = await fetch(
     try {
       setLoading(true);
       setMessage("");
-const response = await fetch(
-  "https://ecommerce-website-12i1.onrender.com/api/auth/verify-forgot-otp",
-  {
+      const response = await fetch(
+        "https://ecommerce-website-12i1.onrender.com/api/auth/verify-forgot-otp",
+        {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -151,9 +151,9 @@ const response = await fetch(
     try {
       setLoading(true);
       setMessage("");
-const response = await fetch(
-  "https://ecommerce-website-12i1.onrender.com/api/auth/reset-password",
-  {
+      const response = await fetch(
+        "https://ecommerce-website-12i1.onrender.com/api/auth/reset-password",
+        {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
