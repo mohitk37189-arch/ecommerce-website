@@ -1313,3 +1313,52 @@ body {
     min-width: 0;
   }
 }
+@media (max-width: 768px) {
+
+  .top-header {
+    width: 100%;
+    min-height: 36px;
+    height: 36px;
+    padding: 0 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 5px;
+    overflow: hidden;
+
+    font-size: 9px;
+    line-height: 1;
+  }
+
+  .top-left,
+  .top-right {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    white-space: nowrap;
+    min-width: 0;
+  }
+
+  .top-left {
+    flex: 0 1 auto;
+  }
+
+  .top-right {
+    flex: 1 1 auto;
+    justify-content: flex-end;
+  }
+
+  .top-left span,
+  .top-right span,
+  .top-header div {
+    white-space: nowrap;
+  }
+
+  .top-header .line {
+    font-size: 11px;
+    margin: 0 2px;
+  }
+}
