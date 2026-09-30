@@ -21,10 +21,28 @@ function App() {
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
-  const [loggedInUser, setLoggedInUser] = useState(
-    JSON.parse(localStorage.getItem("user")) || null
-  );
+  const getLoggedInUser = () => {
+  const savedUser = localStorage.getItem("user");
+  const loginTime = localStorage.getItem("loginTime");
 
+  if (!savedUser || !loginTime) {
+    return null;
+  }
+
+  const oneHour = 60 * 60 * 1000;
+
+  if (Date.now() - Number(loginTime) >= oneHour) {
+    localStorage.removeItem("user");
+    localStorage.removeItem("loginTime");
+    return null;
+  }
+
+  return JSON.parse(savedUser);
+};
+
+const [loggedInUser, setLoggedInUser] = useState(
+  getLoggedInUser()
+);S
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   const [selectedSideCategory, setSelectedSideCategory] =
@@ -33985,14 +34003,13 @@ function App() {
     ) : (
       <Login
         onLogin={(user) => {
-          console.log("LOGIN USER:", user);
+  console.log("LOGIN USER:", user);
 
-          localStorage.setItem("user", JSON.stringify(user));
-          setLoggedInUser(user);
-        }}
-        onSignup={() => {
-          setShowSignup(true);
-        }}
+  localStorage.setItem("user", JSON.stringify(user));
+  localStorage.setItem("loginTime", Date.now().toString());
+
+  setLoggedInUser(user);
+}}
       />
     );
   }
