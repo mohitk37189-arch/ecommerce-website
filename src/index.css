@@ -453,9 +453,7 @@ body {
     width: auto;
   }
 
-  .location {
-    display: none;
-  }
+  
 }
 
 @media (max-width: 700px) {
@@ -919,6 +917,10 @@ body {
     top: 0;
   }
 
+  .location {
+    display: none;
+  }
+
   .login {
     font-size: 13px;
     white-space: nowrap;
@@ -1309,79 +1311,45 @@ body {
     min-width: 0;
   }
 }
-@media (max-width: 768px) {
-
-  .top-header {
-    width: 100%;
-    min-height: 36px;
-    height: 36px;
-    padding: 0 8px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 5px;
-    overflow: hidden;
-
-    font-size: 9px;
-    line-height: 1;
-  }
-
-  .top-left,
-  .top-right {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-
-    white-space: nowrap;
-    min-width: 0;
-  }
-
-  .top-left {
-    flex: 0 1 auto;
-  }
-
-  .top-right {
-    flex: 1 1 auto;
-    justify-content: flex-end;
-  }
-
-  .top-left span,
-  .top-right span,
-  .top-header div {
-    white-space: nowrap;
-  }
-
-  .top-header .line {
-    font-size: 11px;
-    margin: 0 2px;
-  }
+.location {
+  display: block;
+  width: 200px;
+  min-width: 0;
 }
-@media (max-width: 768px) {
 
+.location-wrapper {
+  position: relative;
+  width: 100%;
+  z-index: 2000;
+}
+
+.location-display {
+  cursor: pointer;
+  width: 100%;
+}
+
+.location-text {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+@media (max-width: 700px) {
   .location {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-
-    width: 100%;
-    max-width: 180px;
-
-    padding: 8px 10px;
-    margin: 0;
-
-    font-size: 12px;
-    white-space: nowrap;
-
-    overflow: hidden;
-    text-overflow: ellipsis;
+    display: block;
+    width: 180px;
+    flex: 1;
   }
 
-  .location button {
-    width: 100%;
-    max-width: 180px;
-    padding: 8px 10px;
-    font-size: 12px;
+  .location-popup {
+    width: calc(100vw - 24px);
+    max-width: 420px;
+    left: 0;
+  }
+
+  .location-text {
+    font-size: 14px;
   }
 }
