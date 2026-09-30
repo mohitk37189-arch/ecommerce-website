@@ -59,9 +59,9 @@ function Payment() {
       // CREATE ORDER FROM BACKEND
       // =========================
 
-      const response = await fetch(
-        "http://localhost:5000/api/payment/create-order",
-        {
+    const response = await fetch(
+  "https://ecommerce-website-12i1.onrender.com/api/payment/create-order",
+  {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
