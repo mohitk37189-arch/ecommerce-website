@@ -1353,3 +1353,205 @@ body {
     font-size: 14px;
   }
 }
+/* ================= HEADER ================= */
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+/* LOGO */
+.logo {
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 170px;
+  height: auto;
+  display: block;
+}
+
+/* LOCATION */
+.location {
+  flex-shrink: 0;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 120px;
+}
+
+.location small {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 2px;
+}
+
+.location > * {
+  margin: 0;
+}
+
+/* SEARCH */
+.search-box {
+  flex: 1;
+  min-width: 180px;
+  max-width: 500px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  background: #f5f5f5;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.search-box input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0 15px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.search-box button {
+  width: 50px;
+  height: 100%;
+  border: none;
+  background: white;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* RIGHT SIDE */
+.header > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.cart {
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.header strong {
+  white-space: nowrap;
+  font-size: 15px;
+}
+
+.header button {
+  white-space: nowrap;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1000px) {
+
+  .header {
+    gap: 10px;
+    padding: 12px 15px;
+  }
+
+  .logo img {
+    width: 140px;
+  }
+
+  .location {
+    min-width: 95px;
+  }
+
+  .search-box {
+    min-width: 140px;
+  }
+
+  .header strong {
+    font-size: 13px;
+  }
+
+  .cart {
+    font-size: 13px;
+  }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+  .header {
+    gap: 7px;
+    padding: 10px 8px;
+    overflow: hidden;
+  }
+
+  .logo img {
+    width: 105px;
+  }
+
+  .location {
+    min-width: 75px;
+    max-width: 75px;
+  }
+
+  .location small {
+    display: none;
+  }
+
+  .location button,
+  .location div {
+    font-size: 11px !important;
+  }
+
+  .search-box {
+    flex: 1;
+    min-width: 80px;
+    height: 38px;
+  }
+
+  .search-box input {
+    padding: 0 7px;
+    font-size: 11px;
+  }
+
+  .search-box button {
+    width: 32px;
+    font-size: 16px;
+  }
+
+  .cart {
+    font-size: 0;
+  }
+
+  .cart::before {
+    content: "🛒";
+    font-size: 18px;
+  }
+
+  .header strong {
+    font-size: 0;
+  }
+
+  .header strong::before {
+    content: "👤";
+    font-size: 18px;
+  }
+
+  .header button {
+    padding: 6px 8px !important;
+    font-size: 11px;
+  }
+
+  .header > div:last-child {
+    gap: 5px;
+  }
+}
