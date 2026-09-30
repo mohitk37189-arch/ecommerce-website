@@ -42,7 +42,7 @@ function App() {
 
 const [loggedInUser, setLoggedInUser] = useState(
   getLoggedInUser()
-);S
+);
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   const [selectedSideCategory, setSelectedSideCategory] =
