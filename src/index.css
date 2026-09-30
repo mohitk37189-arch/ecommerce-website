@@ -1262,4 +1262,54 @@ body {
     height: 30px;
     font-size: 10px;
   }
+} 
+@media (max-width: 768px) {
+
+  .header {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    overflow: hidden;
+  }
+
+  .logo {
+    width: 150px;
+    max-width: 150px;
+    flex-shrink: 1;
+  }
+
+  .logo img {
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .login {
+    width: auto;
+    max-width: 90px;
+    margin: 0;
+    padding: 8px 10px;
+    font-size: 12px;
+    white-space: nowrap;
+    flex-shrink: 1;
+  }
+
+  .cart {
+    width: auto;
+    max-width: 90px;
+    padding: 8px 10px;
+    font-size: 11px;
+    white-space: nowrap;
+    flex-shrink: 1;
+  }
+
+  .search-box {
+    width: 100%;
+    flex: 0 0 100%;
+    min-width: 0;
+  }
 }
