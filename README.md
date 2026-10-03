@@ -1,16 +1,65 @@
-# React + Vite
+# 🛒 Fresh Mart - Grocery E-Commerce Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack grocery e-commerce website built with **React.js, Node.js, Express.js and MongoDB**.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://ecommerce-website-seven-cyan.vercel.app/
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🔐 User Login & Signup
+- 📧 OTP Verification
+- 🔑 Forgot Password & Reset Password
+- 🔎 Product Search
+- 🥦 Product Categories
+- 🛒 Shopping Cart
+- 📍 Location Selection
+- 💳 Razorpay Payment Integration
+- 📱 Responsive Design
+- ⚡ Lazy Loading for Product Images
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Frontend
+- React.js
+- JavaScript
+- HTML5
+- CSS3
+- Bootstrap
+
+### Backend
+- Node.js
+- Express.js
+- REST APIs
+
+### Database
+- MongoDB
+
+### Tools & Deployment
+- Git
+- GitHub
+- VS Code
+- Vercel
+- Render
+
+## 📸 Project
+
+Fresh Mart is a grocery shopping platform where users can browse products, search by name, add products to cart, select a delivery location and proceed to payment.
+
+## 🔗 Links
+
+**Live Website:**  
+https://ecommerce-website-seven-cyan.vercel.app/
+
+**GitHub Profile:**  
+https://github.com/mohitk37189-arch
+
+**LinkedIn:**  
+https://www.linkedin.com/in/mohit-kumar602
+
+## 👨‍💻 Author
+
+**Mohit Kumar**
+
+Web Developer
